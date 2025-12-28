@@ -1,5 +1,6 @@
 import { Command } from 'commander'
 import { getDataFromFile } from './parsers.js'
+import { buildDiff } from './buildDiff.js'
 
 const program = new Command()
 
@@ -14,9 +15,7 @@ program
     const data1 = getDataFromFile(filepath1)
     const data2 = getDataFromFile(filepath2)
 
-    console.log('Successfully parsed files:')
-    console.log(`${filepath1}:`, data1)
-    console.log(`${filepath2}:`, data2)
+    console.log(buildDiff(data1, data2))
   })
 
 program.parse()
