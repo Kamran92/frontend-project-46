@@ -1,6 +1,6 @@
 import { Command } from 'commander'
-import { getDataFromFile } from './parsers.js'
-import { buildDiff } from './buildDiff.js'
+import { getDataFromFile } from './src/getDataFromFile.js'
+import { buildDiff } from './src/buildDiff.js'
 
 const program = new Command()
 
@@ -17,5 +17,4 @@ program
 
     console.log(buildDiff(data1, data2))
   })
-
-program.parse()
+  .parse()

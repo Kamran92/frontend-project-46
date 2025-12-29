@@ -24,7 +24,7 @@ const parse = (data, format) => {
     case 'json':
       return JSON.parse(data)
     default:
-      throw new Error(`Unsupported format: ${format}`)
+      throw new Error(`формат не поддерживается: ${format}`)
   }
 }
 

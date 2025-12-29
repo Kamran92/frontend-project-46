@@ -4,6 +4,9 @@
 ### SonarQube:
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Kamran92_frontend-project-46&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Kamran92_frontend-project-46)
 
+### Test coverage:
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Kamran92_frontend-project-46&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Kamran92_frontend-project-46)
+
 ### gendiff help
 [![asciicast](https://asciinema.org/a/nulDqHsghiuUCHlQkB691TvbY.svg)](https://asciinema.org/a/nulDqHsghiuUCHlQkB691TvbY)
 
