@@ -10,5 +10,8 @@
 ### gendiff help
 [![asciicast](https://asciinema.org/a/nulDqHsghiuUCHlQkB691TvbY.svg)](https://asciinema.org/a/nulDqHsghiuUCHlQkB691TvbY)
 
-### gendiff file1 file2
+### gendiff file1.json file2.json
 [![asciicast](https://asciinema.org/a/UBipExnA8JHeKN8qB3zYbmAqF.svg)](https://asciinema.org/a/UBipExnA8JHeKN8qB3zYbmAqF)
+
+### gendiff file1.yaml file2.yaml
+[![asciicast](https://asciinema.org/a/fIVo5sU2HxLucNiFQra3pdma3.svg)](https://asciinema.org/a/fIVo5sU2HxLucNiFQra3pdma3)

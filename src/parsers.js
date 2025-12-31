@@ -1,12 +1,6 @@
 import _ from 'lodash'
 
-const formatDiff = (diff) => {
-  const lines = diff.map(line => `  ${line}`)
-
-  return `{\n${lines.join('\n')}\n}`
-}
-
-export const buildDiff = (obj1, obj2) => {
+export const parsers = (obj1, obj2) => {
   const keys = _.sortBy(_.union(Object.keys(obj1), Object.keys(obj2)))
 
   const diff = keys
@@ -27,5 +21,5 @@ export const buildDiff = (obj1, obj2) => {
     })
     .flat()
 
-  return formatDiff(diff)
+  return diff
 }

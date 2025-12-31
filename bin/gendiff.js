@@ -1,3 +1,7 @@
 #!/usr/bin/env node
 
-import('../index.js')
+import { createCLI } from '../src/index.js'
+
+const program = createCLI()
+
+program.parse()

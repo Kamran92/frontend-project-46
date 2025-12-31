@@ -6,7 +6,7 @@ import path from 'path'
 describe('getDataFromFile', () => {
   describe('Пути', () => {
     test('должен читать файл по абсолютному пути', () => {
-      const absolutePath = path.resolve('__fixtures__', 'file1.json')
+      const absolutePath = path.resolve('__fixtures__', 'json-files', 'file1.json')
       const result = getDataFromFile(absolutePath)
 
       expect(result).toEqual({
@@ -18,7 +18,7 @@ describe('getDataFromFile', () => {
     })
 
     test('должен читать файл по относительному пути', () => {
-      const result = getDataFromFile('__fixtures__/file1.json')
+      const result = getDataFromFile('__fixtures__/json-files/file1.json')
 
       expect(result).toEqual({
         host: 'hexlet.io',
@@ -31,7 +31,7 @@ describe('getDataFromFile', () => {
 
   describe('Чтение файла', () => {
     test('должен корректно читать содержимое JSON файла', () => {
-      const result = getDataFromFile('__fixtures__/file1.json')
+      const result = getDataFromFile('__fixtures__/json-files/file1.json')
 
       expect(typeof result).toBe('object')
       expect(result.host).toBe('hexlet.io')

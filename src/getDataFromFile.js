@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import yaml from 'js-yaml'
 
 const getAbsolutePath = (filepath) => {
   return path.isAbsolute(filepath)
@@ -23,6 +24,8 @@ const parse = (data, format) => {
   switch (format) {
     case 'json':
       return JSON.parse(data)
+    case 'yaml':
+      return yaml.load(data)
     default:
       throw new Error(`формат не поддерживается: ${format}`)
   }
