@@ -1,7 +1,8 @@
 import { Command } from 'commander'
-import { getDataFromFile } from './getDataFromFile.js'
+import { getDataAndFormatFromFile } from './utils/getDataAndFormatFromFile.js'
 import { parsers } from './parsers.js'
-import { formatStylish } from './formatStylish.js'
+import { formatStylish } from './formatters/stylish.js'
+import { getDiffTree } from './utils/getDiffTree.js'
 
 export const createCLI = () => {
   const program = new Command()
@@ -14,12 +15,12 @@ export const createCLI = () => {
     .argument('<filepath2>')
     .option('-f, --format <type>', 'output format')
     .action((filepath1, filepath2, { format = 'stylish' }) => {
-      const data1 = getDataFromFile(filepath1)
-      const data2 = getDataFromFile(filepath2)
-      const diff = parsers(data1, data2)
+      const data1 = parsers(getDataAndFormatFromFile(filepath1))
+      const data2 = parsers(getDataAndFormatFromFile(filepath2))
+      const diffTree = getDiffTree(data1, data2)
 
       if (format === 'stylish') {
-        console.log(formatStylish(diff))
+        console.log(formatStylish(diffTree))
 
         return
       }

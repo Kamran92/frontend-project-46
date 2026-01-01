@@ -6,8 +6,8 @@ import { createCLI } from '../src'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-const testFile1 = resolve(__dirname, '../__fixtures__/json-files/file1.json')
-const testFile2 = resolve(__dirname, '../__fixtures__/json-files/file2.json')
+const testFile1 = resolve(__dirname, './__fixtures__/json-files/file1.json')
+const testFile2 = resolve(__dirname, './__fixtures__/json-files/file2.json')
 
 const getOutput = ({ command }) => {
   const program = createCLI()

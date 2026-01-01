@@ -15,3 +15,6 @@
 
 ### gendiff file1.yaml file2.yaml
 [![asciicast](https://asciinema.org/a/fIVo5sU2HxLucNiFQra3pdma3.svg)](https://asciinema.org/a/fIVo5sU2HxLucNiFQra3pdma3)
+
+### gendiff file1.json file2.json (nested)
+[![asciicast](https://asciinema.org/a/WPGacz2vcGGAUxC647FqTXE58.svg)](https://asciinema.org/a/WPGacz2vcGGAUxC647FqTXE58)

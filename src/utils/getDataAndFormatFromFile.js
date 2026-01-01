@@ -1,6 +1,5 @@
 import fs from 'fs'
 import path from 'path'
-import yaml from 'js-yaml'
 
 const getAbsolutePath = (filepath) => {
   return path.isAbsolute(filepath)
@@ -20,20 +19,9 @@ const getFormat = (filepath) => {
   return ext.slice(1)
 }
 
-const parse = (data, format) => {
-  switch (format) {
-    case 'json':
-      return JSON.parse(data)
-    case 'yaml':
-      return yaml.load(data)
-    default:
-      throw new Error(`формат не поддерживается: ${format}`)
-  }
-}
-
-export const getDataFromFile = (filepath) => {
+export const getDataAndFormatFromFile = (filepath) => {
   const data = readFile(filepath)
   const format = getFormat(filepath)
 
-  return parse(data, format)
+  return { data, format }
 }
