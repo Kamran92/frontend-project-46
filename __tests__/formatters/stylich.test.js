@@ -1,6 +1,6 @@
 import { describe, expect, test } from '@jest/globals'
 import formatStylish from '../../src/formatters/stylish.js'
-import mockInvalidDiffTree from '../__fixtures__/moka-files/mockInvalidDiffTree.js'
+import mockInvalidDiffTree from '../__fixtures__/mock-files/mockInvalidDiffTree.js'
 
 describe('formatStylish', () => {
   test('должен выбрасывать ошибку для неизвестного типа узла', () => {

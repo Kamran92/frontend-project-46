@@ -1,27 +1,27 @@
 import fs from 'fs'
 import { describe, expect, test } from '@jest/globals'
 import format from '../../src/formatters/index.js'
-import mockDiffTree from '../__fixtures__/moka-files/mockDiffTree.js'
+import mockDiffTree from '../__fixtures__/mock-files/mockDiffTree.js'
+
+const expectedStylishFormat = fs.readFileSync('__tests__/__fixtures__/mock-files/expected-stylish.txt', 'utf-8')
+const expectedJsonFormat = fs.readFileSync('__tests__/__fixtures__/mock-files/expected-plain.txt', 'utf-8')
 
 describe('format', () => {
   test('должен преобразовывать в формат "stylish"', () => {
     const result = format(mockDiffTree, 'stylish')
-    const expected = fs.readFileSync('__tests__/__fixtures__/moka-files/expected-stylish.txt', 'utf-8')
 
-    expect(result).toBe(expected)
+    expect(result).toBe(expectedStylishFormat)
   })
 
   test('должен преобразовывать в формат "stylish"', () => {
     const result = format(mockDiffTree)
-    const expected = fs.readFileSync('__tests__/__fixtures__/moka-files/expected-stylish.txt', 'utf-8')
 
-    expect(result).toBe(expected)
+    expect(result).toBe(expectedStylishFormat)
   })
 
   test('должен преобразовывать в формат "plain"', () => {
     const result = format(mockDiffTree, 'plain')
-    const expected = fs.readFileSync('__tests__/__fixtures__/moka-files/expected-plain.txt', 'utf-8')
 
-    expect(result).toBe(expected)
+    expect(result).toBe(expectedJsonFormat)
   })
 })
