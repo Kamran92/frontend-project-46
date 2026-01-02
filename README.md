@@ -21,3 +21,6 @@
 
 ### gendiff file1.yaml file2.yaml --format plain
 [![asciicast](https://asciinema.org/a/I9ZK8JUX1k8PlC3HVWeHyZ773.svg)](https://asciinema.org/a/I9ZK8JUX1k8PlC3HVWeHyZ773)
+
+### gendiff file1.yaml file2.yaml --format json
+[![asciicast](https://asciinema.org/a/lx2t8rX3Tcb2Kzl3XXYKuJ4L1.svg)](https://asciinema.org/a/lx2t8rX3Tcb2Kzl3XXYKuJ4L1)

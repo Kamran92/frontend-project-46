@@ -27,6 +27,15 @@ describe('parser', () => {
     expect(data).toEqual(yaml.load(file))
   })
 
+  test('должен читать файл yml', () => {
+    const path = resolve(__dirname, './__fixtures__/yaml-files/file1.yaml')
+    const file = fs.readFileSync(path, 'utf-8')
+
+    const data = parsers({ data: file, format: 'yml' })
+
+    expect(data).toEqual(yaml.load(file))
+  })
+
   test('должен выбрасывать ошибку для неподдерживаемого формата', () => {
     expect(() => {
       parsers({ data: '', format: 'txt' })
