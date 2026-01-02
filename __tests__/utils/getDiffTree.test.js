@@ -1,8 +1,8 @@
 import { describe, test, expect } from '@jest/globals'
-import { parsers } from '../src/parsers.js'
-import { getDiffTree } from '../src/utils/getDiffTree.js'
-import { getDataAndFormatFromFile } from '../src/utils/getDataAndFormatFromFile.js'
-import mockDiffTree from './__fixtures__/moka-files/mockDiffTree.js'
+import parsers from '../../src/parsers.js'
+import { getDiffTree } from '../../src/utils/getDiffTree.js'
+import { getDataAndFormatFromFile } from '../../src/utils/getDataAndFormatFromFile.js'
+import mockDiffTree from '../__fixtures__/moka-files/mockDiffTree.js'
 
 const file1Json = parsers(getDataAndFormatFromFile('__tests__/__fixtures__/json-files/file1.json'))
 const file2Json = parsers(getDataAndFormatFromFile('__tests__/__fixtures__/json-files/file2.json'))

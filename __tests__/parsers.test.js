@@ -3,7 +3,7 @@ import { dirname, resolve } from 'path'
 import { describe, test, expect } from '@jest/globals'
 import fs from 'fs'
 import yaml from 'js-yaml'
-import { parsers } from '../src/parsers.js'
+import parsers from '../src/parsers.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)

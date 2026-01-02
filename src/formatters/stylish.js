@@ -68,10 +68,10 @@ const formatNode = (node, depth, replacer, spacesCount) => {
     }
 
     default:
-      throw new Error(`Unknown node type: ${node.type}`)
+      throw new Error(`Неизвестный тип: ${node.type}`)
   }
 }
 
-export const formatStylish = (diffTree, depth = 1, replacer = ' ', spacesCount = 4) => {
+export default (diffTree, depth = 1, replacer = ' ', spacesCount = 4) => {
   return formatNode(diffTree, depth, replacer, spacesCount)
 }
